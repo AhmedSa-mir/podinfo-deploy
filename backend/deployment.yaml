@@ -24,6 +24,8 @@ spec:
     spec:
       containers:
       - name: backend
+        securityContext:
+          allowPrivilegeEscalation: true
         image: stefanprodan/podinfo:6.0.0
         imagePullPolicy: IfNotPresent
         ports:
